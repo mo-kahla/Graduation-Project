@@ -42,4 +42,4 @@ Here are some screenshots of the project:
 ![LSB Encoding](assets/images/lsb_encoding.jpg)
 
 ### Example of CNN Encoding
-![CNN Encoding](assets/images/cnn_encoding.png)
+![CNN Encoding](assets/images/cnn_encoding.jpg)
