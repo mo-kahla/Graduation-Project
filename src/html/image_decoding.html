@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="image.css">
+        <link rel="stylesheet" href="normalize.css">
+        
+    </head>
+
+    <body>
+
+      <header>
+        <h1 onclick="location.href='home.html'" style="cursor: pointer;">Steganography</h1>
+        <nav>
+          <a href="home.html">Home</a>
+          <a href="EncodingPage.html">Encode</a>
+          <a href="DecodingPage.html">Decode</a>
+        </nav>
+      </header>
+
+      <div id="header" >
+
+        <button onclick= "location.href='image_decoding.html'" class="tab" id="tab1" style="cursor: pointer;" >
+          
+          <h4 >LSB </h4>
+        
+        </button>
+
+        <button onclick= "location.href='decode_dct.html'" class="tab" id="tab2" style="cursor: pointer;" >
+          <h4>DCT</h4>
+        </button>
+    
+
+    
+        </div>
+    
+    
+          <div id="parentmain">
+    
+            <div id="parenthome">
+    
+              <h1 id="logo1">Decoding</h1>
+      
+              <div id="file-upload" class="file-upload">
+                
+      
+                What is this ?
+      
+                <p>Here you can hide any message you want in any image or audio file of your choosing. 
+                  choose from techniques such as Least Significant Bit (LSB), 
+                  Discrete Cosine Transform (DCT) or a machine learning inspired model using a convolutional neural network (CNN).</p>
+              
+                <div id="image-upload-wrap" class="image-upload-wrap">
+      
+                  <input id="i1" class="file-upload-input" type='file' accept="image/*"/>
+      
+                  <div id="drag-text" class="drag-text">
+                    <h3>Drag and drop a file or select add Image</h3>
+                  </div>
+      
+                  <div id="file-upload-content" class="file-upload-content">
+                    <img id="im1" class="file-upload-image" src="" alt="your image" />
+                  </div>
+      
+                </div>
+      
+                <button class="file-upload-btn" type="button" onclick="onDecodeClicked()">Decode</button>
+      
+              </div>
+
+              <div id="optionsform">
+        
+                <div>I've got a key ! <button class="btn disable" id="btn_password1" onclick="onEnableClicked(this.id)">Disable</button></div>
+                <div id="password_decode"><div></div><input type="text" name="password" id="key_decode" placeholder="Type here..."> </div>
+                <div>want to decode by 2 Lsb technique ! <button class="btn disable" id="btn_password2" onclick="DesignSwap(this.id)" >Disable</button></div>
+                
+                
+              </div>
+    
+    
+              <button class="collapsible">Result</button>
+    
+              <div id="result">
+    
+                <div id="image-result-wrap" class="image-result-wrap">
+      
+                  <div id="drag-text" class="drag-text">
+                    <h3 id="decoded_result">Result image after encoding</h3>
+                  </div>
+      
+                  <div id="file-upload-content" class="file-upload-content">
+                    <img id="im1" class="file-upload-image" src="" alt="your image" />
+                  </div>
+      
+                </div>
+    
+              </div>
+            </div>
+
+            <div id="particles-js"></div>
+
+
+            <script src="particles.js"></script>
+            <script src="app.js"></script>
+            <script src="image.js"></script>
+    </body>
+</html>

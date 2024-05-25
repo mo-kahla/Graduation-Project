@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audio</title>
+  <!-- Meta -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <link href="newAudio.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+
+  <div id="parentmain">
+
+    <div id="parenthome">
+
+    <h1 id="logo1">Encoding</h1>
+
+    <div id="file-upload" class="file-upload">
+      
+
+      What is this ?
+
+      <p>Here you can hide any message you want in  audio file of your choosing. 
+        the used technique is Least Significant Bit (LSB), 
+        or Two Least Significant Bit depending on the size of the message you want to hide and the size of the audio</p>
+    
+      <div id="image-upload-wrap" class="image-upload-wrap">
+
+        <input id="file-upload-input" onchange='openFile(event)' class="file-upload-input" type='file' accept="audio/*" />
+        
+        <div id="drag-text" class="drag-text">
+          <h3>Drag and drop a file or select add audio</h3>
+        </div>
+        
+        <div id="file-upload-content" class="file-upload-content">
+          <audio id="audio" src="" controls>  </audio>
+        </div>
+
+
+          
+        </div>
+        
+
+      
+
+      <button class="file-upload-btn" type="button" onclick="onEncodeClicked(this.id)">encode</button>
+
+    </div>
+      <div id="optionsform">
+        
+        <div id="password"><div>Enter your message to be encoded </div><input type="text" name="password" id="originalText" placeholder="Type here..."> </div>
+
+        <div>i want to encrypt the message<button class="btn disable" id="btn_password" onclick="DesignSwap(this.id)" >Disable</button></div>
+        
+        
+        
+
+        
+      </div>
+      <button class="collapsible">Result</button>
+
+      <div id="result">
+
+        <div id="image-result-wrap" class="image-result-wrap">
+
+          <div id="drag-text2" class="drag-text2">
+            <h3 id="resultToHide">Result audio after encoding</h3>
+            <div >decryption key is:</div>
+            <text id="encryptionKey"></text>
+            <h3 id="techniqueChoosen"></h3>
+            
+            <audio id="audioResult" src="" controls>  </audio>
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div id="particles-js"></div>
+</body>
+<script src="newAudio.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="static/script_upload.js"></script>-->
+<script src="particles.js"></script>
+<script src="app.js"></script>
+</html>

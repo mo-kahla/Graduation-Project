@@ -1,0 +1,44 @@
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
+<link rel="stylesheet" href="home.css">
+
+</head>
+<header>
+  <h1 onclick="location.href='home.html'" style="cursor: pointer;">Steganography</h1>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="EncodingPage.html">Encode</a>
+    <a href="DecodingPage.html">Decode</a>
+  </nav>
+</header>
+<div class='split-pane col-xs-12 col-sm-6 uiux-side'>
+    <div>
+      
+      <div class='text-content'>
+        <div class="bold">You want to</div>
+        <div class='big'>Hide data?</div>
+      </div>
+      <button onclick= "location.href='EncodingPage.html'"  id="encodePage" type="button" >
+        Encode
+      </button>
+    </div>
+  </div>
+  <div class='split-pane col-xs-12 col-sm-6 frontend-side'>
+    <div>
+      
+      <div class='text-content'>
+        <div class="bold">You want to</div>
+        <div class='big'>Extract data?</div>
+      </div>
+      <a class='button' onclick= "location.href='DecodingPage.html'"  id="encodePage" type="button">
+        Decode
+      </a>
+    </div>
+  </div>
+  <div id='split-pane-or'>
+    <div>
+      
+    </div>
+  </div>
+  

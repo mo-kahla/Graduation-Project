@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="image.css">
+        <link rel="stylesheet" href="cnn.css">
+        <link rel="stylesheet" href="normalize.css">
+    </head>
+    <body>
+      <div id="header" >
+
+        <button onclick= "location.href='image.html'" class="tab" id="tab1" style="cursor: pointer;" >
+          
+          <h4 >LSB </h4>
+        
+        </button>
+
+        <button onclick= "location.href='encode_dct.html'" class="tab" id="tab2" style="cursor: pointer;" >
+          <h4>DCT</h4>
+        </button>
+
+        <div onclick= "location.href='cnn.html'" class="tab" id="tab3" style="cursor: pointer;">
+          <h4>CNN</h4>
+        </div>
+    
+
+      </div>
+        
+        <div id="parentmain">
+
+            <div id="parenthome-cnn">
+
+                <div id="file-upload" class="file-upload">
+                  
+        
+                  Host
+        
+                  <p>Here you can hide images using cnn.</p>
+                
+                  <div id="image-upload-wrap" class="image-upload-wrap">
+        
+                    <input id="i1" class="file-upload-input1" type='file' accept="image/*" onchange='openFile(event)'/>
+        
+                    <div id="drag-text1" class="drag-text">
+                      <h3>Drag and drop a file or select add Image</h3>
+                    </div>
+        
+                    <div id="file-upload-content1" class="file-upload-content">
+                      <img id="im11" class="file-upload-image" src="" alt="your image" />
+                    </div>
+        
+                  </div>
+                
+                </div>
+
+                <div id="file-upload" class="file-upload">
+                  
+        
+                    Payload 
+          
+                    <p>Here you can hide images using cnn.</p>
+                  
+                    <div id="image-upload-wrap" class="image-upload-wrap">
+          
+                      <input id="i1" class="file-upload-input2" type='file' accept="image/*" onchange='openFile(event)'/>
+          
+                      <div id="drag-text2" class="drag-text">
+                        <h3>Drag and drop a file or select add Image</h3>
+                      </div>
+          
+                      <div id="file-upload-content2" class="file-upload-content">
+                        <img id="im12" class="file-upload-image" src="" alt="your image" />
+                      </div>
+          
+                    </div>
+          
+                    <button class="file-upload-btn" type="button" onclick="onPredictClicked()">encode</button>
+          
+                  </div>
+
+                  <div id="image-upload-wrap" class="image-upload-wrap-result">
+                  
+                    <div id="drag-text2" class="drag-text">
+                      <h3 id="result_text">Result Image</h3>
+                      <img id="result1" class="file-upload-image" src="" alt="your image" />
+                    </div>
+        
+                  </div>
+
+                  <div id="image-upload-wrap" class="image-upload-wrap-result">
+                  
+                    <div id="drag-text2" class="drag-text">
+                      <h3 id="result_text2">Result Image</h3>
+                      <img id="result2" class="file-upload-image" src="" alt="your image" />
+                    </div>
+        
+                  </div>
+      
+
+        </div>
+        
+        <script src="cnn.js"></script>
+    </body>
+</html>
